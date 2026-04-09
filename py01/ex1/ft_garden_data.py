@@ -10,7 +10,7 @@ if __name__ == "__main__":
         Plant("rose", 25, 30),
         Plant("sunflower", 80, 45),
         Plant("cactus", 15, 120)
-        ]
+    ]
     print("=== Garden Plant Registry ===")
     for plant in plants:
         print(f"{plant.name.capitalize()}: {plant.height}cm", end="")
