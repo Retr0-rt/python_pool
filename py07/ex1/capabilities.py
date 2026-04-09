@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from ex0.CreatureFactory import Creature, CreatureFactory
 from typing import Union
 
+
 class HealCapability(ABC):
     @abstractmethod
     def heal(self, target: "Creature") -> str:
