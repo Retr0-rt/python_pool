@@ -1,6 +1,6 @@
 from ex1.Capabilities import HealingCreatureFactory, TransformCreatureFactory
 from ex1.Capabilities import HealCapability, TransformCapability
-from typing import cast
+
 
 def test_healing_factory():
     factory = HealingCreatureFactory()
@@ -14,12 +14,11 @@ def test_healing_factory():
     if (isinstance(base, HealCapability)):
         print(base.heal())
 
-
     print("evolved:")
     evolved = factory.create_evolved()
     print(evolved.describe())
     print(evolved.attack())
-    if(isinstance(evolved, HealCapability)):
+    if (isinstance(evolved, HealCapability)):
         print(evolved.heal())
 
 
@@ -31,7 +30,7 @@ def test_transforming_factory():
     base = factory.create_base()
     print(base.describe())
     print(base.attack())
-    if(isinstance(base, TransformCapability)):
+    if (isinstance(base, TransformCapability)):
         print(base.transform())
         print(base.attack())
         print(base.revert())
@@ -40,7 +39,7 @@ def test_transforming_factory():
     evolved = factory.create_evolved()
     print(evolved.describe())
     print(evolved.attack())
-    if(isinstance(evolved, TransformCapability)):
+    if (isinstance(evolved, TransformCapability)):
         print(evolved.transform())
         print(evolved.attack())
         print(evolved.revert())
