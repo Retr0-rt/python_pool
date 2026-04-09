@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 from ex0.CreatureFactory import Creature, CreatureFactory
-from typing import Union
+from typing import Union, Optional
 
 
 class HealCapability(ABC):
     @abstractmethod
-    def heal(self, target: "Creature") -> str:
+    def heal(self, target: Optional["Creature"] = None) -> str:
         pass
 
 
@@ -29,7 +29,7 @@ class Sproutling(Creature, HealCapability):
     def attack(self) -> str:
         return "Sproutling uses Vine Whip!"
 
-    def heal(self, target: Union["Creature", None] = None):
+    def heal(self, target: Optional["Creature"] = None):
         if target is None or target == self:
             return f"{self._name} heals itself for a small amount"
         else:
@@ -43,7 +43,7 @@ class Bloomelle(Creature, HealCapability):
     def attack(self) -> str:
         return "Bloomelle uses Petal Dance!"
 
-    def heal(self, target: Union["Creature", None] = None):
+    def heal(self, target: Optional["Creature"] = None):
         if target is None or target == self:
             return f"{self._name} heals itself and others for a large amount"
         else:
