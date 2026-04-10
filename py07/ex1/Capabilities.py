@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from ex0.CreatureFactory import Creature, CreatureFactory
-from typing import Union, Optional
+from typing import Optional
 
 
 class HealCapability(ABC):
