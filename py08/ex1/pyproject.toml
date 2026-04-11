@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "matrix-loader"
+version = "0.1.0"
+description = "Loading programs for the matrix"
+authors = ["Data Engineer <engineer@zion.local>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.0"
+numpy = "^1.25.0"
+matplotlib = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

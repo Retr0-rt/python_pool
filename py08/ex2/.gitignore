@@ -1,0 +1,10 @@
+.env
+
+
+__pycache__/
+
+# virtual environement
+matrix_env/
+venv/
+.venv/
+env/
