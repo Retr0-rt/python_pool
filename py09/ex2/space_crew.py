@@ -123,7 +123,7 @@ def main() -> None:
         print("Crew members:")
         for member in valid_mission.crew:
             print(
-                f"- {member.name} ({member.rank.value}) | "
+                f"- {member.name} ({member.rank.value}) - "
                 f"{member.specialization}")
         print()
 
